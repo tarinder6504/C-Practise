@@ -1,0 +1,61 @@
+Sets are a part of the C++ STL. Sets are containers that store unique elements following a specific order. Here are some of the frequently used member functions of sets:
+
+    Declaration:
+
+    set<int>s; //Creates a set of integers.
+
+    Size:
+
+    int length=s.size(); //Gives the size of the set.
+
+    Insert:
+
+    s.insert(x); //Inserts an integer x into the set s.
+
+    Erasing an element:
+
+    s.erase(val); //Erases an integer val from the set s.
+
+    Finding an element:
+
+    set<int>::iterator itr=s.find(val); //Gives the iterator to the element val if it is found otherwise returns s.end() .
+    Ex: set<int>::iterator itr=s.find(100); //If 100 is not present then it==s.end().
+
+    To know more about sets click Here. Coming to the problem, you will be given Q queries. 
+
+
+Solutions:-
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int q;
+    cin>>q;
+    set <long long int> s;
+    for(int i=0;i<q;i++)
+    {
+        int y;
+        long long int x;
+        cin>>y>>x;
+        if(y==1)
+            s.insert(x);
+        else if(y==2)
+            s.erase(x);
+        else
+        {
+            if(s.end()==s.find(x))
+                cout<<"No"<<endl;
+            else
+                cout<<"Yes"<<endl;
+        }
+    }
+    return 0;
+}
