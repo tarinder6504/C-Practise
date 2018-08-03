@@ -34,18 +34,18 @@ To get the value stored of the key "MAPS" we can do m["MAPS"] or we can get the 
 
 Solutions:-
 
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <set>
-#include <map>
-#include <algorithm>
+#include <cmath.h>
+#include <cstdio.h>
+#include <vector.h>
+#include <iostream.h>
+#include <set.h>
+#include <map.h>
+#include <algorithm.h>
 using namespace std;
 
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+  
         map<string,int>m ;
         map<string,int>::iterator itr ;
         int n ,qvalue ,marks ;
